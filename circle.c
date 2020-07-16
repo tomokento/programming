@@ -1,19 +1,22 @@
-#include  <stdio.h>
+#include <stdio.h>
+#define pi 3.141592653589
+//使う実数の値は、定数の場合はちゃんとしたものを入れて行うこと。
 
-  int main(){
-    int w,h,x,y,r;
+int main(){
+  double r;
+  double s,c;
 
-    scanf("%d %d %d %d %d",&w,&h,&x,&y,&r);
+  scanf("%lf",&r);
 
-   int y_u,y_h,x_r,x_l;
-   y_u = y-r;
-   y_h = y+r;
-   x_r = x+r;
-   x_l = x-r;
+  s = (double)r*r*pi;
+  c = (double)2*r*pi;
+  printf("%f %f\n",s,c);
 
-   if(y_u >= 0 && y_h <= h && x_l >= 0 && x_r <= w)
-   printf("Yes\n");
-
-   else printf("No\n");
-   return 0;
-  }
+  /*int FILE *fp;
+  fp = fopen ("filename.txt","r");
+  if (fp!=NULL)
+  {
+    fscanf(fp,"Some String\n", &var);
+    fclose (fp);
+  }*/
+}
